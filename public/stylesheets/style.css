@@ -1,8 +1,515 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Niramit', sans-serif;
+  margin-bottom: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+.stir-theme {
+  background-color: white;
+  color: #a76660;
+  font-size: 30px;
+  text-align: center;
 }
+
+.services p{
+  padding-bottom:50px;
+  margin-bottom:0;
+}
+
+a{
+  color:inherit;
+}
+
+.stir-theme-black {
+  background-color: #0c0c0e;
+  color: #ececec;
+}
+
+#logo {
+  position: fixed;
+  left: 5vw;
+  top: 30px;
+  width: 150px;
+  z-index: 3;
+}
+
+img {
+  object-fit: cover;
+  display: block;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/*used in mobileCocktail*/
+
+.cuteCocktail {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url("/images/icon.png") no-repeat;
+  background-size: 25px 25px;
+}
+
+/*parallax images used in homepage*/
+
+#imagem1,
+#imagem2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/*used in the rest of the pages*/
+
+#imagem3,
+#imagem4,
+#imagem5,
+#imagem6,
+#imagem7,
+#imagem8,
+#imagem9,
+#imagem10
+{
+  position: relative;
+  height: 70vh;
+}
+
+
+.thirtyViewPort {
+  height: 30vh;
+  width: 100%;
+  position: relative;
+}
+
+/*center title of 30 view port*/
+
+.thirtyViewPort span {
+  position: relative;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+/*screens less than 700 resize font-sizes*/
+
+@media only screen and (max-width: 700px) {
+  .thirtyViewPort span,
+  .thirtyViewPort p {
+    font-size: 26px;
+  }
+
+  .thirtyViewPort p {
+    font-size: 26px;
+  }
+}
+
+.inner hr {
+  background-color: #a76660;
+  border: 0;
+  height: 2px;
+  border-radius: 40%;
+}
+
+.inner img {
+  display: block;
+  width: 90%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+
+/* NAVIGATION */
+
+/*main nav bar*/
+
+ul {
+  display: inline-block;
+  position: absolute;
+  list-style-type: none;
+  right: 0;
+  margin-top: 20px;
+  margin-right: 40px;
+  font-size: 22px;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+  z-index: 4;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: #a1736f;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+
+ul li a:hover {
+  color: #6f2b26;
+  text-decoration: none;
+}
+
+/*end of main nav bar*/
+
+/*side nav*/
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 4;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #a76660;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+#sideNavButton {
+  display: none;
+  position: fixed;
+  color: #a76660;
+  top: 30px;
+  right: 4vh;
+  z-index: 3;
+}
+
+@media only screen and (max-width:1000px) {
+  /* Styles */
+  ul {
+    display: none;
+  }
+
+  #sideNavButton {
+    display: inline;
+  }
+
+}
+
+/*end of side nav*/
+
+/* END of NAVIGATION */
+
+/*MAIN PAGE  ENTRY STUFF */
+
+#entryPage {
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+video {
+  position: relative;
+  /*min-width: 100%;*/
+  min-height: 100%;
+  /*z-index: -1;*/
+  /*background-position: center;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+  width: 100vw;
+  object-fit: cover;
+  z-index: 1;
+}
+
+#arrowDown {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 4;
+}
+
+/* END OF ENTRY PAGE */
+
+/*BE A GUEST AT YOUR PARTY*/
+
+#intro {
+  height: 70vh;
+  font-size: 40px;
+  font-family: 'Neucha', cursive !important;
+}
+
+#intro div {
+  position: relative;
+  /*magical centering!*/
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*END OF BE A GUEST AT YOUR PARTY*/
+
+/*GALERY SECTION*/
+
+#intro-text-services {
+  text-align: center;
+  margin-bottom: 50px;
+  padding-top: 50px;
+}
+
+.col-flex5 {
+  flex-basis: 40%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.col-flex5 a img {
+  display: block;
+  width: 100%;
+  height: 65%;
+  transition: opacity .25s ease-in-out;
+}
+
+.col-flex5 a img:hover {
+  opacity: 0.7;
+}
+
+/*Descriptive title of gallery images*/
+
+.col-flex5 span {
+  display: inline-block;
+  position: relative;
+  top: 7px;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+/* Smartphones (landscape) ----------- */
+
+@media only screen and (max-width: 700px) {
+  /* Styles */
+  .col-flex5 {
+    flex-basis: 100%;
+  }
+  .container {
+    width: 95%;
+  }
+  #promoPackages {
+    height: 70vh;
+  }
+}
+
+/*END OF GALLERY SECTION*/
+
+/*COME FIND US*/
+
+#text3 {
+  width: 100%;
+  position: relative;
+  /*this portion centers the div cuz of: magic!*/
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#promoPackages {
+  height: 45vh;
+}
+
+@media only screen and (max-width: 700px) {
+  #promoPackages {
+    height: 70vh;
+  }
+}
+
+/*END OF COME FIND US*/
+
+/*CONTACT SECTION*/
+
+#contact {
+  position: relative;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+
+/* ---------------BUTTONS STYLE ------------- */
+
+.promo-button {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  top: 0px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 50px;
+  border: 1px solid #a1736f;
+  background-color: #38110e;
+  font-size: 25px;
+  color: #a1736f;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.promo-button:hover {
+  background-color: #6f2b26;
+}
+
+
+.submit-button {
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #38110e;
+  color: #a1736f;
+  width: 100px;
+  height: 40px;
+  border: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: 0.4s ease;
+}
+
+.submit-button:hover {
+  background-color: #6f2b26;
+}
+
+.round-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50% !important;
+  border: 0px solid #f5f6f7;
+}
+
+#social-buttons {
+  padding-top: 40px;
+}
+
+a button {
+  height: 60px;
+  width: 60px;
+  font-size: 26px;
+  background-color: #ececec;
+  color: #0c0c0e;
+  cursor: pointer;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+a button:hover {
+  background-color: #0c0c0e;
+  color: #ececec;
+}
+
+/*END OF BUTTON STYLES*/
+
+/*CONTACT INFO*/
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  text-align: left;
+  font-size: 30px;
+  overflow: visible;
+}
+
+@media only screen and (max-width: 700px) {
+  .grid {
+    display: block;
+    text-align: center;
+    font-size:30px;
+  }
+}
+
+/*END OF CONTACT INFO*/
+
+/*FORM*/
+
+#form {
+  text-align: left;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 7px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#name {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6px;
+}
+
+/*END OF FORM*/
+
+/*SEPERATOR*/
+
+hr {
+  border: 0;
+  background-color: white;
+  height: 2px;
+  border-radius: 40%;
+}
+
+
+/*BRANDS*/
+
+.row-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.col-flex {
+  margin-bottom: 30px;
+  flex-basis: 25%;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 800px) {
+  .col-flex {
+    flex-basis: 45%;
+  }
+}
+
+
+.brands-logo {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*END OF BRANDS*/
