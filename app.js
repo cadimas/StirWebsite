@@ -1,13 +1,12 @@
-var createError = require("http-errors");
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+let createError = require("http-errors");
+let express = require("express");
+let path = require("path");
+let cookieParser = require("cookie-parser");
+let logger = require("morgan");
 
-var homeRouter = require("./routes/home");
-var usersRouter = require("./routes/users");
+/* let homeRouter = require("./routes/home"); */
 
-var app = express();
+let app = express();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -19,8 +18,20 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", homeRouter);
-app.use("/users", usersRouter);
+app.use("/", require("./routes/home"));
+app.use("/about", require("./routes/about"));
+app.use("/barHireStaff", require("./routes/barHireStaff"));
+app.use(
+  "/coffeeCocktailConversations",
+  require("./routes/coffeeCocktailConversations")
+);
+app.use("/gallery", require("./routes/gallery"));
+app.use("/howToMakeCocktails", require("./routes/howToMakeCocktails"));
+app.use("/mobileCocktails", require("./routes/mobileCocktails"));
+app.use("/services", require("./routes/services"));
+app.use("/tailoredCocktails", require("./routes/tailoredCocktails"));
+app.use("/teamBuilding", require("./routes/teamBuilding"));
+app.use("/weddingBar", require("./routes/weddingBar"));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
