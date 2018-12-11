@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+//all me routes!
 app.use("/", require("./routes/home"));
 app.use("/about", require("./routes/about"));
 app.use("/barHireStaff", require("./routes/barHireStaff"));
@@ -27,7 +28,7 @@ app.use(
 );
 app.use("/gallery", require("./routes/gallery"));
 app.use("/howToMakeCocktails", require("./routes/howToMakeCocktails"));
-app.use("/mobileCocktails", require("./routes/mobileCocktails"));
+app.use("/mobileCocktail", require("./routes/mobileCocktail"));
 app.use("/services", require("./routes/services"));
 app.use("/tailoredCocktails", require("./routes/tailoredCocktails"));
 app.use("/teamBuilding", require("./routes/teamBuilding"));

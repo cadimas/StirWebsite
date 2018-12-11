@@ -1,8 +1,10 @@
 body {
-  font-family: 'Niramit', sans-serif;
+  font-family: "Niramit", sans-serif;
+  position: relative;
   margin-bottom: 0;
   padding: 0;
   margin: 0;
+  z-index: 0;
   box-sizing: border-box;
 }
 
@@ -13,13 +15,13 @@ body {
   text-align: center;
 }
 
-.services p{
-  padding-bottom:50px;
-  margin-bottom:0;
+.services p {
+  padding-bottom: 50px;
+  margin-bottom: 0;
 }
 
-a{
-  color:inherit;
+a {
+  color: inherit;
 }
 
 .stir-theme-black {
@@ -73,12 +75,10 @@ img {
 #imagem7,
 #imagem8,
 #imagem9,
-#imagem10
-{
+#imagem10 {
   position: relative;
   height: 70vh;
 }
-
 
 .thirtyViewPort {
   height: 30vh;
@@ -122,7 +122,6 @@ img {
   max-width: 850px;
   margin: 0 auto;
 }
-
 
 /* NAVIGATION */
 
@@ -199,7 +198,6 @@ ul li a:hover {
   margin-left: 50px;
 }
 
-
 #sideNavButton {
   display: none;
   position: fixed;
@@ -209,7 +207,7 @@ ul li a:hover {
   z-index: 3;
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width: 1000px) {
   /* Styles */
   ul {
     display: none;
@@ -218,7 +216,6 @@ ul li a:hover {
   #sideNavButton {
     display: inline;
   }
-
 }
 
 /*end of side nav*/
@@ -264,7 +261,7 @@ video {
 #intro {
   height: 70vh;
   font-size: 40px;
-  font-family: 'Neucha', cursive !important;
+  font-family: "Neucha", cursive !important;
 }
 
 #intro div {
@@ -294,7 +291,7 @@ video {
   display: block;
   width: 100%;
   height: 65%;
-  transition: opacity .25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .col-flex5 a img:hover {
@@ -360,7 +357,6 @@ video {
   padding-bottom: 50px;
 }
 
-
 /* ---------------BUTTONS STYLE ------------- */
 
 .promo-button {
@@ -381,7 +377,6 @@ video {
 .promo-button:hover {
   background-color: #6f2b26;
 }
-
 
 .submit-button {
   font-weight: bold;
@@ -443,7 +438,7 @@ a button:hover {
   .grid {
     display: block;
     text-align: center;
-    font-size:30px;
+    font-size: 30px;
   }
 }
 
@@ -455,7 +450,7 @@ a button:hover {
   text-align: left;
 }
 
-input[type=text] {
+input[type="text"] {
   width: 100%;
   padding: 7px 20px;
   margin: 8px 0;
@@ -482,7 +477,6 @@ hr {
   border-radius: 40%;
 }
 
-
 /*BRANDS*/
 
 .row-flex {
@@ -504,7 +498,6 @@ hr {
     flex-basis: 45%;
   }
 }
-
 
 .brands-logo {
   display: block;
