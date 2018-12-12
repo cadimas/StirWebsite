@@ -2,8 +2,17 @@
 /* full screen image slider */
 
 let arr = []; //an array of image sources
-for (let i = 0; i < 17; i++) {
-  arr.push(`/images/gallery/${i}.jpg`);
+
+//pictures suitable for landscape
+if ($(window).width() > $(window).height()) {
+  for (let i = 0; i < 12; i++) {
+    arr.push(`/images/gallery/landscape/${i}.jpg`);
+  }
+} else {
+  //else pictures suitable for phone view port
+  for (let i = 0; i < 15; i++) {
+    arr.push(`/images/gallery/phone/${i}.jpg`);
+  }
 }
 
 let pos = 0; //initializes image position in the array
