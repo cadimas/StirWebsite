@@ -1,6 +1,7 @@
 body {
   font-family: "Niramit", sans-serif;
   position: relative;
+  text-align: center;
   font-size: 30px;
   margin-bottom: 0;
   padding: 0;
@@ -12,21 +13,20 @@ body {
 .stir-theme {
   background-color: white;
   color: #a76660;
-  text-align: center;
 }
 
-.services p {
-  padding-bottom: 50px;
-  margin-bottom: 0;
+.stir-theme-black {
+  background-color: #0c0c0e;
+  color: #ececec;
 }
 
 a {
   color: inherit;
 }
 
-.stir-theme-black {
-  background-color: #0c0c0e;
-  color: #ececec;
+.services p {
+  padding-bottom: 50px;
+  margin-bottom: 0;
 }
 
 #logo {
@@ -96,13 +96,7 @@ img {
   font-weight: bold;
 }
 
-/*screens less than 700 resize font-sizes*/
-
-@media only screen and (max-width: 700px) {
-  body {
-    font-size: 26px;
-  }
-}
+/* DIVISER */
 
 .inner hr {
   background-color: #a76660;
@@ -120,7 +114,7 @@ img {
 
 /* NAVIGATION */
 
-/*main nav bar*/
+/*MAIN NAV BAR*/
 
 ul {
   display: inline-block;
@@ -154,9 +148,9 @@ ul li a:hover {
   text-decoration: none;
 }
 
-/*end of main nav bar*/
+/*END OF MAIN NAV BAR*/
 
-/*side nav*/
+/*SIDE NAV*/
 
 .sidenav {
   height: 100%;
@@ -202,18 +196,7 @@ ul li a:hover {
   z-index: 3;
 }
 
-@media only screen and (max-width: 1000px) {
-  /* Styles */
-  ul {
-    display: none;
-  }
-
-  #sideNavButton {
-    display: inline;
-  }
-}
-
-/*end of side nav*/
+/*END OF SIDE NAV*/
 
 /* END of NAVIGATION */
 
@@ -268,7 +251,7 @@ video {
 
 /*END OF BE A GUEST AT YOUR PARTY*/
 
-/*GALERY SECTION*/
+/*GALERY SECTION FROM MAIN PAGE*/
 
 #intro-text-services {
   text-align: center;
@@ -303,22 +286,7 @@ video {
   line-height: 1.2;
 }
 
-/* Smartphones (landscape) ----------- */
-
-@media only screen and (max-width: 700px) {
-  /* Styles */
-  .col-flex5 {
-    flex-basis: 100%;
-  }
-  .container {
-    width: 95%;
-  }
-  #promoPackages {
-    height: 70vh;
-  }
-}
-
-/*END OF GALLERY SECTION*/
+/* END OF GALLERY SECTION FROM MAIN PAGE */
 
 /*COME FIND US*/
 
@@ -336,19 +304,13 @@ video {
   height: 45vh;
 }
 
-@media only screen and (max-width: 700px) {
-  #promoPackages {
-    height: 70vh;
-  }
-}
-
 /*END OF COME FIND US*/
 
 /*CONTACT SECTION*/
 
 #contact {
   position: relative;
-  text-align: center;
+
   padding-bottom: 50px;
 }
 
@@ -373,6 +335,8 @@ video {
   background-color: #6f2b26;
 }
 
+/* submit button from form */
+
 .submit-button {
   font-weight: bold;
   cursor: pointer;
@@ -390,20 +354,17 @@ video {
   background-color: #6f2b26;
 }
 
-.round-btn {
-  width: 50px;
-  height: 50px;
-  border-radius: 50% !important;
-  border: 0px solid #f5f6f7;
-}
+/* social media button */
 
 #social-buttons {
   padding-top: 40px;
 }
 
-a button {
-  height: 60px;
-  width: 60px;
+.round-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50% !important;
+  border: 0px solid #f5f6f7;
   font-size: 26px;
   background-color: #ececec;
   color: #0c0c0e;
@@ -412,7 +373,7 @@ a button {
   transition: all 0.7s ease;
 }
 
-a button:hover {
+.round-btn:hover {
   background-color: #0c0c0e;
   color: #ececec;
 }
@@ -426,14 +387,6 @@ a button:hover {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   text-align: left;
   overflow: visible;
-}
-
-@media only screen and (max-width: 700px) {
-  .grid {
-    display: block;
-    text-align: center;
-    font-size: 26px;
-  }
 }
 
 /*END OF CONTACT INFO*/
@@ -462,7 +415,7 @@ input[type="text"] {
 
 /*END OF FORM*/
 
-/*SEPERATOR*/
+/*divisor*/
 
 hr {
   border: 0;
@@ -487,12 +440,6 @@ hr {
   z-index: 1;
 }
 
-@media only screen and (max-width: 800px) {
-  .col-flex {
-    flex-basis: 45%;
-  }
-}
-
 .brands-logo {
   display: block;
   width: 80%;
@@ -500,3 +447,41 @@ hr {
 }
 
 /*END OF BRANDS*/
+
+/* MEDIA QUERYS */
+
+@media only screen and (max-width: 700px) {
+  body {
+    font-size: 26px;
+  }
+  .col-flex5 {
+    flex-basis: 100%;
+  }
+  .container {
+    width: 95%;
+  }
+  #promoPackages {
+    height: 70vh;
+  }
+  .grid {
+    display: block;
+    text-align: center;
+    font-size: 26px;
+  }
+  #promoPackages {
+    height: 70vh;
+  }
+  .col-flex {
+    flex-basis: 45%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  ul {
+    display: none;
+  }
+
+  #sideNavButton {
+    display: inline;
+  }
+}
