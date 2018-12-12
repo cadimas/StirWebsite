@@ -1,4 +1,5 @@
-/* Authored by Boaz James Otieno */
+/* Original author  Boaz James Otieno */
+/* Fiddled by Andre Gomes*/
 /* full screen image slider */
 
 let arr = []; //an array of image sources
@@ -17,7 +18,7 @@ if ($(window).width() > $(window).height()) {
 
 let pos = 0; //initializes image position in the array
 $(document).ready(function() {
-  let interval = 5000; //interval for slide
+  const interval = 5000; //interval for slide
   let loaderHtml = "";
   arr.forEach(function(src) {
     loaderHtml += '<img src="' + src + '">';
@@ -25,22 +26,9 @@ $(document).ready(function() {
 
   $(".load-images").html(loaderHtml);
 
-  let htm = "";
-  /* initializes the small circles html*/
-  for (let i = 0; i < arr.length; i++) {
-    htm +=
-      '<div id="' +
-      i +
-      '" class="circle" onclick="circleClick(' +
-      i +
-      ')"> </div> ';
-  }
-
-  $("#circles").html(htm); //show small circles
   $("#slider").html(
     '<img src="' + arr[0] + '" class="img-slide image-animated"">'
   ); //show first image
-  $("#0").css({ background: "#fff", color: "#fff" }); //sets the background of the first small circle to black
 
   /* Auto slides the images with the image sources array given as first argument and interval as second argument */
   function autoSlide(arr, interval) {
@@ -58,17 +46,6 @@ $(document).ready(function() {
           pos +
           ' image-animated">'
       ); //shows image
-      $("#" + pos).css({ background: "#fff", color: "#fff" }); //sets background-color of circle representing the current active image to black
-      $("#" + (pos - 1)).css({
-        background: "transparent",
-        color: "transparent"
-      }); //sets background-color of circle before active to white
-      if (pos == 0) {
-        $("#" + (arr.length - 1)).css({
-          background: "transparent",
-          color: "transparent"
-        });
-      }
     }, interval);
   }
   /* end of function autoSlide */
@@ -84,15 +61,6 @@ $(document).ready(function() {
       '<img src="' + arr[pos + 1] + '" class="img-slide image-animated">'
     ); //show image
     pos++;
-
-    $("#" + pos).css({ background: "#fff", color: "#fff" }); //sets background-color of circle representing the current active image to black
-    $("#" + (pos - 1)).css({ background: "transparent", color: "transparent" }); //sets background-color of circle before active to white
-    if (pos == 0) {
-      $("#" + (arr.length - 1)).css({
-        background: "transparent",
-        color: "transparent"
-      });
-    }
   }
   /* end of function next  */
 
@@ -105,12 +73,6 @@ $(document).ready(function() {
       '<img src="' + arr[pos - 1] + '" class="img-slide image-animated">'
     );
     pos--;
-
-    $("#" + pos).css({ background: "#fff", color: "#fff" }); //sets background-color of circle representing the current active image to black
-    $("#" + (pos + 1)).css({ background: "transparent", color: "transparent" }); //sets background-color of circle before active to white
-    if (pos == arr.length - 1) {
-      $("#0").css({ background: "transparent", color: "transparent" });
-    }
   }
   /* end of function previous */
 
@@ -128,18 +90,3 @@ $(document).ready(function() {
   });
   /* end of onclick previous */
 });
-
-/* displays image represented by the small circle */
-function circleClick(position) {
-  if (position != pos) {
-    $("#slider").html(
-      '<img src="' + arr[position] + '" class="img-slide image-animated">'
-    ); //show image
-
-    $("#" + position).css({ background: "#fff", color: "#fff" }); //sets background-color of circle representing the current active image to black
-    $("#" + pos).css({ background: "transparent", color: "transparent" }); //sets background-color of circle before active to white
-
-    pos = position;
-  }
-  /* end of function circleClick */
-}
