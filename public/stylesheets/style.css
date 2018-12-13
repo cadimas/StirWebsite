@@ -22,6 +22,7 @@ body {
 
 a {
   color: inherit;
+  text-decoration-line: none;
 }
 
 .services p {
@@ -96,7 +97,7 @@ img {
   font-weight: bold;
 }
 
-/* DIVISER */
+/* diviser */
 
 .inner hr {
   background-color: #a76660;
@@ -114,7 +115,7 @@ img {
 
 /* NAVIGATION */
 
-/*MAIN NAV BAR*/
+/*main nav bar*/
 
 ul {
   display: inline-block;
@@ -127,7 +128,7 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: transparent;
-  z-index: 4;
+  z-index: 30;
 }
 
 ul li {
@@ -148,9 +149,9 @@ ul li a:hover {
   text-decoration: none;
 }
 
-/*END OF MAIN NAV BAR*/
+/*end of main nav bar*/
 
-/*SIDE NAV*/
+/*side nav*/
 
 .sidenav {
   height: 100%;
@@ -196,7 +197,7 @@ ul li a:hover {
   z-index: 3;
 }
 
-/*END OF SIDE NAV*/
+/*end of side nav*/
 
 /* END of NAVIGATION */
 

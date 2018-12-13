@@ -33,6 +33,8 @@ app.use("/services", require("./routes/services"));
 app.use("/tailoredCocktails", require("./routes/tailoredCocktails"));
 app.use("/teamBuilding", require("./routes/teamBuilding"));
 app.use("/weddingBar", require("./routes/weddingBar"));
+app.use("/testimonials", require("./routes/testimonials"));
+app.use("/packages", require("./routes/packages"));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
