@@ -20,6 +20,11 @@ body {
   color: #ececec;
 }
 
+/*removes outline when div is clicked*/
+*:focus {
+  outline: 0;
+}
+
 a {
   color: inherit;
   text-decoration-line: none;
