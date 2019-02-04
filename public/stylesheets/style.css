@@ -209,6 +209,7 @@ ul li a:hover {
 /*MAIN PAGE  ENTRY STUFF */
 
 #entryPage {
+  position: relative;
   width: 100%;
   height: 100%;
   height: 100vh;
@@ -231,11 +232,25 @@ video {
 
 #arrowDown {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
+  display: block;
+  bottom: 10px;
+  right: 10px;
+  width: 70px;
+  height: 70px;
+  background-color: rgb(53, 31, 31, 0.61);
+  border-radius: 8%;
   z-index: 4;
+}
+
+#arrowDown img {
+  position: absolute; /*it can be fixed too*/
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 60px;
+  width: 60px;
+  margin: auto;
 }
 
 /* END OF ENTRY PAGE */
@@ -360,7 +375,7 @@ video {
   background-color: #6f2b26;
 }
 
-/* social media button */
+/* social media buttons */
 
 #social-buttons {
   padding-top: 40px;
@@ -417,6 +432,10 @@ input[type="text"] {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 6px;
+}
+
+#sucess {
+  display: none;
 }
 
 /*END OF FORM*/

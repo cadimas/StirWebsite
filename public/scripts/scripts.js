@@ -37,14 +37,6 @@ $(document).ready(function() {
 
   $("#imagem10").parallax({ imageSrc: "/images/big/coffeeCocktailBig.jpg" });
 
-  function arrowScroll(scroll) {
-    if (scroll == 0) {
-      $("#arrowDown").css("display", "show");
-    } else {
-      $("#arrowDown").css("display", "none");
-    }
-  }
-
   var scrollLink = $(".scroll");
 
   // Smooth scrolling
@@ -71,8 +63,6 @@ $(document).ready(function() {
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     parallax(scroll);
-    arrowScroll(scroll);
-
     var scrollbarLocation = $(this).scrollTop();
 
     scrollLink.each(function() {

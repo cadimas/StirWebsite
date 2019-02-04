@@ -37,22 +37,23 @@
       <!-- ------------  CONTACT INFO END ----------  -->
         
       <!--  --------------- FORM  ---------------------------- -->
-          <div id="form">
-            <form>
+          <div id="form" >
+            <form action="/submit" method="post">
               <p>Name*</p>
               <div id="name">
-                  <input type="text"  name="name">
-                  <input type="text" name="Last">
+                  <input type="text"  name="First" required>
+                  <input type="text" name="Last" required>
               </div>
               <p>Email Adress*</p>
-              <input type="text"  name="name">
+              <input type="text"  name="email" required>
               
               <p>Subject*</p>
-              <input type="text"  name="name">
+              <input type="text"  name="Subject" required>
               
               <p>Message*</p>
-              <input type="text"   name="name">
+              <input type="text"   name="Message" required>
               <input  class="submit-button" type="submit" value="SUBMIT">
+              <p id="sucess">Message was sent sucessfully!!!</p>
             </form>
           </div>
         
@@ -65,31 +66,17 @@
           <h3>It's been a  pleasure working with these companies</h3>
             <div class="row-flex">
               <div class="col-flex">
-                <img class="brands-logo" src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c53e.png">
+                <img class="brands-logo" src="images/logos/ml.png">
               </div>
               <div class="col-flex">
-                <img class="brands-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6s0yCgKqUG6tUKX8C1cKpFP_5WjlcLI6IIrGSvA2-MoqE9XcX">
+                <img class="brands-logo" src="/images/logos/orso.jpg">
               </div>
               <div class="col-flex">
-                <img class="brands-logo" src="data:image/jpeg;base64,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">
+                <img class="brands-logo" src="/images/logos/elbowLane.png">
               </div>
               <div class="col-flex">
-                <img class="brands-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpevzP4VMc6I3kQf2FKkPJR8Y7jqUW8_P5cMcyVoqz2609RP0x">
+                <img class="brands-logo" src="/images/logos/castle.png">
               </div>
-              <div class="col-flex">
-                <img class="brands-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpevzP4VMc6I3kQf2FKkPJR8Y7jqUW8_P5cMcyVoqz2609RP0x">
-              </div>
-              <div class="col-flex">
-                <img class="brands-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpevzP4VMc6I3kQf2FKkPJR8Y7jqUW8_P5cMcyVoqz2609RP0x">
-              </div>
-              <div class="col-flex">
-                <img class="brands-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpevzP4VMc6I3kQf2FKkPJR8Y7jqUW8_P5cMcyVoqz2609RP0x">
-              </div>
-              <div class="col-flex">
-                <img class="brands-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpevzP4VMc6I3kQf2FKkPJR8Y7jqUW8_P5cMcyVoqz2609RP0x">
-              </div>
-
-
             </div>
           <br>
       </div>

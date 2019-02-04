@@ -1,50 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title><%= title %></title>
-        <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
-        <link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="/scripts/parallax.min.js"></script>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        <script src="scripts/scripts.js"></script>
-        <link rel="stylesheet" href="stylesheets/style.css">
-        <% if(title == "gallery") {  %>
-            <script src="scripts/image-slider.js"></script>
-            <link rel="stylesheet" href="stylesheets/image-slider.css">
-        <% } %>
-    </head>
-    
-    <body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Andre Gomes" />
+    <title><%= title %></title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Niramit"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Neucha"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/scripts/parallax.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="scripts/scripts.js"></script>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <% if(title == "gallery") { %>
+    <script src="scripts/image-slider.js"></script>
+    <link rel="stylesheet" href="stylesheets/image-slider.css" />
+    <% } %>
+  </head>
+
+  <body>
     <!--class="scroll"-->
-    
-    <a href="#entryPage" style="z-index:4;position:relative;cursor:pointer;" >
-        <img id="logo" src="images/stirLogo.png">
+
+    <a href="#entryPage" style="z-index:4;position:relative;cursor:pointer;">
+      <img id="logo" src="images/stirLogo.png" />
     </a>
 
-    
     <ul>
-        <li><a href="/">home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="packages">Packages</a></li>
-        <li><a href="/gallery">Gallery</a></li>
-        <li><a href="/testimonials">Testimonials</a></li>
-        <li><a href="#contact" class="scroll">Contact</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="packages">Packages</a></li>
+      <li><a href="/gallery">Gallery</a></li>
+      <li><a href="/testimonials">Testimonials</a></li>
+      <li><a href="#contact" class="scroll">Contact</a></li>
     </ul>
-    <span id="sideNavButton" style="font-size:30px;cursor:pointer">&#9776;</span>
-    
-<div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn">&times;</a>
-    <a href="/">Home</a></li>
-    <a href="/about">About</a></li>
-    <a href="/services">Services</a>
-    <a href="/packages">Packages</a>
-    <a href="/gallery">Gallery</a>
-    <a href="/testimonials">Testimonials</a>
-    <a href="#contact" class="scroll">Contact</a>
-</div>
+    <span id="sideNavButton" style="font-size:30px;cursor:pointer"
+      >&#9776;</span
+    >
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn">&times;</a>
+      <a href="/">Home</a> <a href="/about">About</a>
+      <a href="/services">Services</a> <a href="/packages">Packages</a>
+      <a href="/gallery">Gallery</a> <a href="/testimonials">Testimonials</a>
+      <a href="#contact" class="scroll">Contact</a>
+    </div>
+  </body>
+</html>

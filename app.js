@@ -1,3 +1,5 @@
+let emailer = require("./emailer/emailer.js");
+
 let createError = require("http-errors");
 let express = require("express");
 let path = require("path");
@@ -35,6 +37,11 @@ app.use("/teamBuilding", require("./routes/teamBuilding"));
 app.use("/weddingBar", require("./routes/weddingBar"));
 app.use("/testimonials", require("./routes/testimonials"));
 app.use("/packages", require("./routes/packages"));
+
+app.post("/submit", function(req, res) {
+  let { First, Last, email, Subject, Message } = req.body;
+  emailer.send(First, Last, email, Subject, Message);
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
