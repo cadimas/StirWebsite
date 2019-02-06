@@ -6,7 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 
 #bot Stuff
-bot
+details.js
 
 # Runtime data
 pids

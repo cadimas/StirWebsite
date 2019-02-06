@@ -6,14 +6,13 @@ let path = require("path");
 let cookieParser = require("cookie-parser");
 let logger = require("morgan");
 
-/* let homeRouter = require("./routes/home"); */
-
 let app = express();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+//middleware
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -41,6 +40,7 @@ app.use("/packages", require("./routes/packages"));
 app.post("/submit", function(req, res) {
   let { First, Last, email, Subject, Message } = req.body;
   emailer.send(First, Last, email, Subject, Message);
+  res.send("Your email was successfully sent!"); //placeholder
 });
 
 // catch 404 and forward to error handler
