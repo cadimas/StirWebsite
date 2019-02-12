@@ -3,8 +3,8 @@ let emailer = require("./emailer/emailer.js");
 let createError = require("http-errors");
 let express = require("express");
 let path = require("path");
-let cookieParser = require("cookie-parser");
-let logger = require("morgan");
+let compression = require("compression");
+let helmet = require("helmet");
 
 let app = express();
 
@@ -13,10 +13,10 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 //middleware
-app.use(logger("dev"));
 app.use(express.json());
+app.use(helmet());
+app.use(compression());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 //all me routes!
@@ -38,9 +38,14 @@ app.use("/testimonials", require("./routes/testimonials"));
 app.use("/packages", require("./routes/packages"));
 
 app.post("/submit", function(req, res) {
-  let { First, Last, email, Subject, Message } = req.body;
-  emailer.send(First, Last, email, Subject, Message);
-  res.send("Your email was successfully sent!"); //placeholder
+  let { first, last, email, subject, message } = req.body;
+  emailer.send(first, last, email, subject, message, err => {
+    if (err) {
+      res.send("An error has occured, please try again later.");
+    } else {
+      res.send("Your message was successfully sent!");
+    }
+  });
 });
 
 // catch 404 and forward to error handler

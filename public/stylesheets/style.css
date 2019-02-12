@@ -375,6 +375,23 @@ video {
   background-color: #6f2b26;
 }
 
+#return {
+  font-weight: bold;
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+#loading-gif {
+  display: none;
+  content: url("/images/ajax-loader.gif");
+  height: 30px;
+  width: 30px;
+  position: relative;
+  margin-left: 10px;
+  top: 10px;
+  text-align: left;
+}
+
 /* social media buttons */
 
 #social-buttons {
@@ -498,6 +515,21 @@ hr {
   }
   .col-flex {
     flex-basis: 45%;
+  }
+  #imagem4 {
+    background-image: url("/images/small/cocktailReception.jpg") !important;
+  }
+  #imagem7 {
+    background-image: url("/images/small/barHireSmall.jpg") !important;
+  }
+  #imagem8 {
+    background-image: url("/images/small/juCocktailSmall.jpg") !important;
+  }
+  #imagem1 {
+    background-image: url("/images/small/cocktail1.jpg") !important;
+  }
+  #imagem2 {
+    background-image: url("/images/small/cocktail2.jpg") !important;
   }
 }
 

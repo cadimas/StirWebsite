@@ -37,25 +37,29 @@
       <!-- ------------  CONTACT INFO END ----------  -->
         
       <!--  --------------- FORM  ---------------------------- -->
-          <div id="form" >
-            <form action="/submit" method="post">
+     
+            <form id="form" action="/submit" method="post">
               <p>Name*</p>
               <div id="name">
-                  <input type="text"  name="First" required>
-                  <input type="text" name="Last" required>
+                  <input type="text"  name="first" required>
+                  <input type="text" name="last" required>
               </div>
               <p>Email Adress*</p>
               <input type="text"  name="email" required>
               
               <p>Subject*</p>
-              <input type="text"  name="Subject" required>
+              <input type="text"  name="subject" required>
               
               <p>Message*</p>
-              <input type="text"   name="Message" required>
+              <input type="text"   name="message" required>
               <input  class="submit-button" type="submit" value="SUBMIT">
-              <p id="sucess">Message was sent sucessfully!!!</p>
+              <img
+              id="loading-gif"
+              alt="loading"
+            />
+            <label id="return"></label>
             </form>
-          </div>
+         
         
       <!--  ------------------ END OF FORM ----------------------  -->
         

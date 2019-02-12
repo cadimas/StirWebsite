@@ -6,12 +6,12 @@ let arr = []; //an array of image sources
 
 //pictures suitable for landscape
 if ($(window).width() > $(window).height()) {
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < 16; i++) {
     arr.push(`/images/gallery/landscape/${i}.jpg`);
   }
 } else {
   //else pictures suitable for phone view port
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < 18; i++) {
     arr.push(`/images/gallery/phone/${i}.jpg`);
   }
 }

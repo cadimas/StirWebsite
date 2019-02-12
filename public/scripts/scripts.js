@@ -1,17 +1,39 @@
-/* global $*/
-
 $(document).ready(function() {
+  //Shows side navs
   $("#sideNavButton").click(() => {
     $("#mySidenav").css("width", "250px");
   });
-
+  //hides side navs
   $(".closebtn").click(() => {
     $("#mySidenav").css("width", "0");
   });
-
+  //On contact link button press, close side nav
   $("#mySidenav a:nth-child(8)").click(() => {
     $("#mySidenav").css("width", "0");
   });
+
+  //AJAX QUERY SERVER
+  $("#form").submit(function(e) {
+    e.preventDefault();
+    let data = getFormData($(this));
+    $("#loading-gif").css("display", "inline-block");
+    $.post("/submit", data).done(data => {
+      $("#loading-gif").css("display", "none");
+      $("#return").html(data);
+    });
+  });
+
+  //prepares form data to be POSTED
+  function getFormData($form) {
+    let unindexed_array = $form.serializeArray();
+    let indexed_array = {};
+
+    $.map(unindexed_array, function(n, i) {
+      indexed_array[n["name"]] = n["value"];
+    });
+
+    return indexed_array;
+  }
 
   function parallax(scroll) {
     $("video").css("top", scroll * 0.75 + "px");
@@ -61,12 +83,12 @@ $(document).ready(function() {
 
   // Active link switching
   $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
+    let scroll = $(window).scrollTop();
     parallax(scroll);
-    var scrollbarLocation = $(this).scrollTop();
+    let scrollbarLocation = $(this).scrollTop();
 
     scrollLink.each(function() {
-      var sectionOffset = $(this.hash).offset().top - 20;
+      let sectionOffset = $(this.hash).offset().top - 20;
 
       if (sectionOffset <= scrollbarLocation) {
         $(this)
