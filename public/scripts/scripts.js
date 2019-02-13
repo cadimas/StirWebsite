@@ -45,13 +45,13 @@ $(document).ready(function() {
 
   $("#imagem3").parallax({ imageSrc: "/images/big/aboutMain.jpg" });
 
-  $("#imagem4").parallax({ imageSrc: "/images/big/weddingBarBig.JPG" });
+  $("#imagem4").parallax({ imageSrc: "/images/big/weddingBarBig.jpg" });
 
-  $("#imagem5").parallax({ imageSrc: "/images/big/mobileCocktailBig.JPG" });
+  $("#imagem5").parallax({ imageSrc: "/images/big/mobileCocktailBig.jpg" });
 
-  $("#imagem6").parallax({ imageSrc: "/images/big/coffeeCocktailBig.JPG" });
+  $("#imagem6").parallax({ imageSrc: "/images/big/coffeeCocktailBig.jpg" });
 
-  $("#imagem7").parallax({ imageSrc: "/images/big/juAndBroBig.JPG" });
+  $("#imagem7").parallax({ imageSrc: "/images/big/juAndBroBig.jpg" });
 
   $("#imagem8").parallax({ imageSrc: "/images/big/jullBlinking.jpg" });
 
